@@ -7,28 +7,28 @@ namespace medial_altura_pessoas_22_09
     {
         static void Main(string[] args)
         {
-            //Criando a variável de entrada
+            //pedindo para o usuario colocar qual a quantidade de pessoas para fazer a media
             Console.WriteLine("Quantas pessoas serão medidas?");
             int n = int.Parse(Console.ReadLine());
-            //Criando vetor com o número da variável de entrada
+            //Criando um array e dando de base o número da variável de entrada
             double[] vect = new double[n];
-            //Utilização do comando for para percorrer o vetor
+            //percorrendo o array e associando cada numero colocado pelo usuario a um espaço nele
             for (int i = 0; i < n; i++)
             {
                 int numpessoa = i + 1;
-                //Entrada dos elementos no vetor pelo usuário
                 Console.WriteLine("A altura da pessoa " + numpessoa + " é de:");
                 vect[i] = double.Parse(Console.ReadLine(),
                 CultureInfo.InvariantCulture);
             }
-            //Variável soma       
+            //criando uma variavel para somar os valores de dentro do array  
             double sum = 0.0;
-            //Utilização do for para percorrer o vetor
+            //Utilizando for para percorrer o array
             for (int i = 0; i < n; i++)
             {
-                //Somatoria dos elementos inseridos
+                //Somando os elementos
                 sum += vect[i]; 
             }
+            //fazendo a media e exibindo ela para o usuario
             double media = sum / vect.Length;
             Console.WriteLine("a media das alturas é :" + media);
         }
